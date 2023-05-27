@@ -1,0 +1,46 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.2'
+
+    // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
+    testImplementation 'io.github.bonigarcia:webdrivermanager:5.3.2'
+
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation 'org.testng:testng:7.7.1'
+
+    //dummy text
+    testImplementation 'com.thedeanda:lorem:2.1'
+
+    // Write properties file
+    testImplementation 'org.apache.commons:commons-configuration2:2.7'
+
+    //POI
+    testImplementation 'org.apache.poi:poi:5.2.2'
+    testImplementation 'org.apache.poi:poi-ooxml:5.2.2'
+
+    // Appium
+    implementation 'io.appium:java-client:8.4.0'
+
+    // For taking video test results
+    implementation 'commons-codec:commons-codec:1.15'
+
+    // FileUtils.copyFile
+    implementation 'commons-io:commons-io:2.11.0'
+
+
+}
+
+test {
+    useTestNG()
+}
