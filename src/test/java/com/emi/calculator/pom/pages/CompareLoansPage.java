@@ -42,6 +42,7 @@ public class CompareLoansPage extends BaseEmiCalculatorTest {
     @AndroidFindBy(id ="layoutTable")
     List<WebElement> layoutTable;
 
+
     public CompareLoansPage(){
         PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(General.TIME_WAIT)), this);
     }
